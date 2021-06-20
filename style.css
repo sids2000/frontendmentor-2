@@ -1,0 +1,143 @@
+:root {
+    --sedan-background: hsl(31, 77%, 52%);
+    --suv-background: hsl(184, 100%, 22%);
+    --luxury-background: hsl(179, 100%, 13%);
+    
+    --primary: hsl(0, 0%, 95%);
+    --secondary: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lexend Deca", cursive;
+    background-color: var(--primary);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    width: 55%;
+    height: 60%;
+    border-radius: 0.5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.icon {
+    width: 5rem;
+    height: 3rem;
+    margin-bottom: 20px;
+}
+
+.card h1 {
+    font-family: "Big Shoulders Display", cursive;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: var(--primary);  
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.5rem;
+    color: var(--secondary);
+}
+
+.sedans {
+    background-color: var(--sedan-background);
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.suvs {
+    background-color: var(--suv-background);
+}
+
+.luxury {
+    background-color: var(--luxury-background);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.text {
+    height: 60%;
+    margin-bottom: 3rem;
+}
+
+.card button {
+    width: 70%;
+    text-decoration: none;
+    border: none;
+    border-radius: 3.5rem;
+    padding: 12px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    border: 2px solid transparent;
+}
+
+.card button:hover {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.sedans button {
+    color: var(--sedan-background);
+}
+
+.sedans button:hover {
+    background-color: var(--sedan-background);
+}
+
+.suvs button {
+    color: var(--suv-background);
+}
+
+.suvs button:hover {
+    background-color: var(--suv-background);
+}
+
+.luxury button {
+    color: var(--luxury-background);
+}
+
+.luxury button:hover {
+    background-color: var(--luxury-background);
+}
+
+@media screen and (max-width:500px){
+    .container {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 100px;
+    }
+
+    .sedans {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .luxury {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+}
